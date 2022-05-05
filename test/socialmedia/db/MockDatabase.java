@@ -3,18 +3,19 @@ package socialmedia.db;
 import socialmedia.Post;
 import socialmedia.User;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class MockDatabase {
 
     private Set<Post> posts = new HashSet<>();
 
-    private Set<User> users = new HashSet<>();
+    private Map<String, User> users = new HashMap<>();
 
-    // TODO: Write tests for this
     void add(User user) {
-        //
+        this.users.put(user.userName, user);
     }
 
     // TODO: Write tests for this
@@ -22,9 +23,8 @@ public class MockDatabase {
         //
     }
 
-    // TODO: Write tests for this
     User retrieve(String userName) {
-        return null;
+        return this.users.get(userName);
     }
 
 }

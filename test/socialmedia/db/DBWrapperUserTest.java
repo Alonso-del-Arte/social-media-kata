@@ -12,6 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DBWrapperUserTest {
 
-    private static class DBWrapperUserImpl {}
+    private static class DBWrapperUserImpl extends DBWrapperUser {}
 
 }
